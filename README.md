@@ -10,6 +10,12 @@ RetroNode is a high-performance, minimalistic retro gaming hub inspired by moder
 - **Lightweight**: Optimized for low resource usage.
 
 
+## Previews
+You can see here an example [preview](.github/previews) of the [v1.0.1-b](./github/previews/v1.0.1-b) version:
+![RetroNode](.github/previews/v1.0.1-b/HomeScreen.png)
+To check all the other [previews](.github/previews/v1.0.1-b/), go to [.github/previews](.github/previews).
+
+
 ## Tech Stack
 - **Frontend**: React, TypeScript, SCSS
 - **Backend**: Node.js
