@@ -9,7 +9,7 @@ import { GameProvider } from '../contexts/games.ctx'
 import { UserProvider } from '../contexts/user.ctx'
 import { SettingsProvider } from '../contexts/settings.ctx'
 
-export default function Contexts(props: ContextsProps): React.ReactElement {
+function Contexts(props: ContextsProps): React.ReactElement {
 	return (
 		<GameProvider>
 			<UserProvider>
@@ -20,3 +20,5 @@ export default function Contexts(props: ContextsProps): React.ReactElement {
 		</GameProvider>
 	)
 }
+
+export default React.memo(Contexts)
