@@ -1,0 +1,66 @@
+@use '../colors' as colors;
+
+.game-card {
+	cursor: pointer;
+	flex: 0 0 auto;
+	width: 150px;
+	height: 150px;
+	margin: 0 1rem;
+	border-radius: 10px;
+	overflow: hidden;
+	position: relative;
+	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+	transition: width 250ms ease-in-out, height 250ms ease-in-out;&:hover,
+		&.active {
+			width: 200px;
+			height: 200px;
+			border: 2px solid colors.$algae-green;
+
+			.game-title-overlay {
+				opacity: 1;
+			}
+		}
+
+	@media screen and (max-width: 1440px) {
+		width: 125px;
+		height: 125px;
+
+		&:hover,
+		&.active {
+			width: 175px;
+			height: 175px;
+		}
+	}
+
+	@media screen and (max-width: 1216px) {
+		width: 100px;
+		height: 100px;
+
+		&:hover,
+		&.active {
+			width: 150px;
+			height: 150px;
+		}
+	}
+
+	img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+	.game-title-overlay {
+		opacity: 0;
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		padding: 0.5rem;
+		background: rgba(0, 0, 0, 0.4);
+		text-align: center;
+		transition: opacity 250ms ease-in-out;
+
+		p {
+			color: colors.$alabaster;
+		}
+	}
+}

@@ -1,0 +1,65 @@
+@use '../colors' as colors;
+
+div.error.page {
+	background-image: url('/error.jpg');
+
+	&::before {
+		background: rgba(colors.$bunker, 0.5) !important;
+	}
+
+	div.error-message {
+		z-index: 1;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+
+		h1 {
+			font-size: 10rem;
+			font-weight: bold;
+		}
+
+		span {
+			margin-top: -1.75rem;
+			font-size: 2rem;
+			font-weight: 600;
+			color: colors.$dusty-gray;
+		}
+
+		p {
+			max-width: 420px;
+			margin-top: 0.5rem;
+			text-align: center;
+			font-size: 1.5rem;
+			color: colors.$athens-gray;
+		}
+
+		div.buttons {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			column-gap: 0.5rem;
+			margin-top: 1rem;
+
+			a {
+				padding: 0.5rem 1rem;
+				text-decoration: none;
+				font-size: 1.25rem;
+				border-radius: 0.25rem;
+				border: 1px solid colors.$alabaster;
+				color: colors.$alabaster;
+				background-color: transparent;
+				transition: color 250ms ease-in-out, background-color 250ms ease-in-out, transform 250ms ease-in-out;
+
+				&:hover {
+					color: colors.$bunker;
+					background-color: colors.$alabaster;
+				}
+
+				&:active {
+					transform: scale(0.95);
+				}
+			}
+		}
+	}
+}

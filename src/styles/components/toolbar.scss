@@ -1,0 +1,52 @@
+@use '../colors' as colors;
+
+nav.toolbar {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	-webkit-app-region: drag;
+
+	span.title {
+		padding-left: 0.5rem;
+		font-weight: 700;
+		letter-spacing: 0.15rem;
+		color: colors.$alabaster;
+	}
+
+	div.buttons {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		-webkit-app-region: no-drag;
+
+		button {
+			cursor: pointer;
+			width: 2.5rem;
+			height: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			padding: 0.25rem;
+			color: colors.$alabaster;
+			background-color: transparent;
+			transition: background-color 300ms ease-in-out;
+
+			&:hover {
+				background-color: rgba(colors.$alabaster, 0.25);
+
+				&:nth-of-type(3) {
+					background-color: rgba(colors.$alizarin-crimson, 0.75);
+				}
+			}
+
+			&:active {
+				background-color: rgba(colors.$alabaster, 0.5);
+
+				&:nth-of-type(3) {
+					background-color: rgba(colors.$alizarin-crimson, 1);
+				}
+			}
+		}
+	}
+}
